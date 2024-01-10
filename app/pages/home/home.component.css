@@ -1,0 +1,595 @@
+/* Reset default browser scrollbar */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* Navbar styles */
+.navbar {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #4e54c8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  z-index: 999;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 80px;
+  font-weight: lighter;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link i {
+  transition: color 0.3s ease; /* Added transition for icon color change */
+}
+
+/* Add hover styles for the icons */
+.navbar-nav .nav-link:hover i {
+  color: #c0c3f3; /* Change the color on hover */
+}
+
+.nav-link::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  opacity: 1;
+}
+
+.navbar-nav.ml-auto {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav.ml-auto .nav-link {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Add hover styles for user profile link */
+.navbar-nav.ml-auto .nav-link:hover {
+  color: #c0c3f3; /* Change the color on hover */
+}
+
+
+/* Dropdown Toggle Button */
+.theme-dropdown-toggle {
+  color: #4e54c8; /* Theme color for the toggle button */
+  text-decoration: none; /* Remove underline */
+  transition: box-shadow 0.3s ease; /* Add transition for box-shadow */
+}
+
+/* Remove box-shadow on click */
+.theme-dropdown-toggle:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove box-shadow on click */
+}
+
+/* Dropdown Menu */
+.theme-dropdown-menu {
+  background-color: #fff; /* Background color for the dropdown menu */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  min-width: 200px; /* Adjust the width as needed */
+}
+
+/* Dropdown Items */
+.theme-dropdown-menu .dropdown-item {
+  color: #4e54c8; /* Text color for dropdown items */
+  font-size: 16px;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-dropdown-menu .dropdown-item:hover,
+.theme-dropdown-menu .dropdown-item:focus {
+  background-color: #4e54c8; /* Background color on hover/focus */
+  color: #fff; /* Text color on hover/focus */
+  text-decoration: none;
+}
+
+/* Dropdown Icons */
+.theme-dropdown-menu .theme-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #4e54c8; /* Icon color */
+}
+
+/* Adjust dropdown item padding for better spacing */
+.theme-dropdown-menu .dropdown-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* Adjust dropdown item padding for better spacing */
+.theme-dropdown-menu .dropdown-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+
+/* Hero Section with Dark Overlay */
+.hero {
+  position: relative;
+  background-image: url('src/assets/images/hotel-img/4p.jpg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  margin-right: 2em;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity (last value) for darkness */
+}
+
+/* Hero text styles (customize as needed) */
+.hero .container {
+  position: relative; /* Ensure the text is above the overlay */
+  z-index: 1; /* Place text above the overlay */
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 100px 0; /* Adjust padding as needed */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Search Form Component styles (customize as needed) */
+.search-bar {
+  margin-top: 20px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-bar form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #4e54c8;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #333;
+}
+
+/* Search Icon Styles */
+.search-bar i.fa-search {
+  color: #fff;
+  font-size: 20px;
+}
+
+ /* Featured Destinations Section */
+ .featured-destinations {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  margin-right: 2em;
+}
+
+.featured-destinations h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #4e54c8; /* Adjust the text color as needed */
+}
+
+.destination-cards-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 20px; /* Add some space at the bottom for horizontal scrollbar */
+  /* Set a fixed width or max-width if needed */
+  /* max-width: 100%; */
+  /* For responsiveness */
+}
+
+.destination-cards {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+  justify-content: flex-start; /* Start from the left */
+  margin: 0 -15px; /* Add spacing between cards */
+}
+
+.destination-card {
+  flex: 0 0 calc(33.33% - 30px); /* Adjust the card width to fit three cards per line */
+  margin: 0 15px; /* Add spacing between cards */
+  border: 1px solid #ccc; /* Add a border for a formal look */
+  border-radius: 5px; /* Add rounded corners for a fancy look */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+}
+
+.destination-image {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.destination-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Add a transition for hover effect */
+}
+
+.destination-image img:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.destination-info {
+  padding: 20px;
+}
+
+.destination-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.destination-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555; /* Adjust the text color as needed */
+}
+
+.destination-info a {
+  display: inline-block;
+  background-color: #4e54c8; /* Choose a suitable background color */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.destination-info a:hover {
+  background-color: #333; /* Change the background color on hover */
+}
+
+/* Search Filters Section */
+.search-filters {
+  background-color: #f9f9f9;
+  padding: 50px 10px;
+  margin-right: 2em;
+  text-align: center;
+}
+
+.search-filters h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #4e54c8;
+}
+
+.search-filters form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-filters .form-group {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.search-filters label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.search-filters select,
+.search-filters input[type="date"],
+.search-filters input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-filters button {
+  background-color: #4e54c8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-filters button:hover {
+  background-color: #333;
+}
+
+/* Popular Travel Categories Section Styles */
+.popular-categories {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  margin-right: 2em;
+}
+
+.popular-categories h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #4e54c8; /* Adjust the text color as needed */
+}
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Add spacing between cards */
+}
+
+.category-card {
+  flex-basis: calc(33.33% - 20px); /* Adjust the card width to fit three cards per row with spacing */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-carousel {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.category-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.category-info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.category-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Text color */
+}
+
+.category-info p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555; /* Text color */
+}
+
+.category-info a {
+  display: inline-block;
+  background-color: #4e54c8;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.category-info a:hover {
+  background-color: #333;
+}
+
+
+/* Footer */
+.footer {
+  position: relative;
+  padding-top: 50px;
+}
+
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid #FFFFFF;
+  border-radius: 35px;
+  transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+  text-decoration: none;
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+/* Circles Animation */
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 140rem;
+  position: relative;
+  overflow: hidden; /* Hide potential overflow */
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+/* Keyframes for circles animation */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

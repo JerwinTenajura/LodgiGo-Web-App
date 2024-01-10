@@ -1,0 +1,60 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"><i class="fa-solid fa-hotel"></i> LodgiGo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/home" title="Home"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/rooms" title="Rooms"><i class="fa-sharp fa-solid fa-hotel"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/client" title="Clients"><i class="fa-solid fa-people-line"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/reservation" title="Reservation"><i class="fa-solid fa-credit-card"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/users" title="Users"><i class="fa-solid fa-circle-user fa-lg"></i></a>
+              </li>
+          </ul>
+
+          <div class="navbar-nav ml-auto">
+              <!-- Show user profile and logout if logged in, otherwise show login link -->
+              <ng-container *ngIf="isLoggedIn()">
+                  <div class="nav-link">Welcome, {{ getUserDisplayName() }}</div>
+                  <div class="nav-link">
+                      <a (click)="logout()" title="Logout" style="cursor: pointer;">
+                          <i class="fa-solid fa-right-from-bracket"></i>
+                      </a>
+                  </div>
+              </ng-container>
+              <ng-container *ngIf="!isLoggedIn()">
+                  <a class="nav-link" routerLink="/login">Login</a>
+              </ng-container>
+          </div>
+      </div>
+  </div>
+</nav>
+
+
+<div class="area">
+    <ul class="circles">
+      <!-- Circles for animated background -->
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</div>
